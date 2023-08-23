@@ -13,6 +13,8 @@ Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "AdderWeb.front", "AdderWeb.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AdderWeb.API", "AdderWeb.API\AdderWeb.API.csproj", "{E8A223D0-67AB-4960-8F85-ADBCC359ABE4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdderWeb.Tests", "AdderWeb.Tests\AdderWeb.Tests.csproj", "{D59F1976-8B76-4B4B-B775-5A96D6A79E57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{E8A223D0-67AB-4960-8F85-ADBCC359ABE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E8A223D0-67AB-4960-8F85-ADBCC359ABE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E8A223D0-67AB-4960-8F85-ADBCC359ABE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D59F1976-8B76-4B4B-B775-5A96D6A79E57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59F1976-8B76-4B4B-B775-5A96D6A79E57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59F1976-8B76-4B4B-B775-5A96D6A79E57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59F1976-8B76-4B4B-B775-5A96D6A79E57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
