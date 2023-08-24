@@ -28,7 +28,7 @@
             SumNumbers() {
                 try {
                     this.isCalculating = true;
-                    let response = fetch("/add", {
+                    fetch("/add", {
                         method: "POST",
                         headers: { "Accept": "application/json", "Content-Type": "application/json" },
                         body: JSON.stringify({

@@ -1,14 +1,14 @@
 <template>
-    <Calculate />
+    <CalculateComponent />
 </template>
 
 <script>
-    import Calculate from '@/components/Calculate.vue'
+    import CalculateComponent from '@/components/CalculateComponent.vue'
 
     export default {
         name: 'App',
         components: {
-            Calculate
+            CalculateComponent
         }
     }
 </script>
