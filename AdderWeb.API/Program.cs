@@ -1,9 +1,3 @@
-using AdderWeb.BLL;
-using AdderWeb.DAL.Context;
-using AdderWeb.DAL.Repositories;
-using AdderWeb.Domain.Contracts;
-using Microsoft.EntityFrameworkCore;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

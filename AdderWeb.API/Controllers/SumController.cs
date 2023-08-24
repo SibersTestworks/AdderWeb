@@ -1,11 +1,7 @@
-﻿using AdderWeb.Domain.Contracts;
-using AdderWeb.Domain.Entities;
-using Microsoft.AspNetCore.Mvc;
-
-namespace AdderWeb.API.Controllers
+﻿namespace AdderWeb.API.Controllers
 {
 
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class SumController : Controller
     {

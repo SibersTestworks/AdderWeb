@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-
-namespace AdderWeb.Domain.Contracts;
+﻿namespace AdderWeb.Domain.Contracts;
 
 /// <summary>
 /// Represents a unit of work for managing database transactions and repositories.
