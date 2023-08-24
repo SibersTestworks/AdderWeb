@@ -1,42 +1,52 @@
 <template>
-    <div class="container mt-5">
-        <h1 class="mb-4">Калькулятор</h1>
-        <div class="mb-3">
-            <input v-model="num1" type="number" class="form-control" placeholder="Первое число">
-            <input v-model="num2" type="number" class="form-control mt-2" placeholder="Второе число">
-        </div>
-        <button @click="sumNumbers" class="btn btn-primary">Сложить</button>
-        <div class="mt-3">
-            <strong>Результат: {{ result }}</strong>
+    <div class="container d-flex justify-content-center align-items-center vh-100">
+        <div class="card p-4">
+            <h1 class="mb-4">Adder</h1>
+            <div class="mb-3 d-flex">
+                <input v-model="first" type="number" class="form-control me-2" placeholder="First numer">
+                <input v-model="second" type="number" class="form-control" placeholder="Second number">
+            </div>
+            <button @click="SumNumbers" class="btn btn-primary" :disabled="isCalculating">Sum</button>
+            <div class="mt-3">
+                <strong>Result: {{ result }}</strong>
+            </div>
         </div>
     </div>
 </template>
 
-<!--<script>
-    import { defineComponent } from 'vue';
+<script>
     export default {
         data() {
             return {
-                num1: 0,
-                num2: 0,
-                result: 0
+                first: null,
+                second: null,
+                result: 0,
+                isCalculating: false
             };
         },
         methods: {
-            async sumNumbers() {
-                const response = await fetch('Sum', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        num1: this.num1,
-                        num2: this.num2
+            SumNumbers() {
+                try {
+                    this.isCalculating = true;
+                    let response = fetch("Sum/add", {
+                        method: "POST",
+                        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+                        body: JSON.stringify({
+                            first: this.first,
+                            second: this.second
+                        })
                     })
-                });
-                const data = await response.json();
-                this.result = data.result;
+                        .then((response) => response.json())
+                        .then((data) => {
+                            this.first = data.first,
+                                this.second = data.second,
+                                this.result = data.result
+                        });
+                } catch (e) {
+                    console.log(e);
+                }
+                finally { this.isCalculating = false; }
             }
         }
     };
-</script>-->
+</script>

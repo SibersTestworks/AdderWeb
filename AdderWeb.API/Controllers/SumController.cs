@@ -1,6 +1,5 @@
 ﻿namespace AdderWeb.API.Controllers
 {
-
     [Route("[controller]")]
     [ApiController]
     public class SumController : Controller
@@ -13,7 +12,7 @@
             this.sumService = sumService;
         }
 
-        [HttpPost("sum")]
+        [HttpPost("add")]
         public async Task<IResult> Create(Sum sum)
         {
             sum.Result = sum.First + sum.Second;
