@@ -23,11 +23,8 @@ module.exports = {
             key: fs.readFileSync(keyFilePath),
             cert: fs.readFileSync(certFilePath),
         },
-        proxy: {
-            '^/Sum': {
-                target: 'https://localhost:5001'
-            }
-        },
+        proxy:  'https://localhost:5001'
+        ,
         port: 5002
     }
 }

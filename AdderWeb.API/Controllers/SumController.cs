@@ -1,6 +1,6 @@
 ﻿namespace AdderWeb.API.Controllers
 {
-    [Route("[controller]")]
+    [Route("")]
     [ApiController]
     public class SumController : Controller
     {
